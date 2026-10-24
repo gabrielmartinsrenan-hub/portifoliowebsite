@@ -65,12 +65,36 @@ footer{text-align:center;color:var(--suave);font-size:.85rem;padding:30px 6vw 40
 @media(max-width:760px){#fundo{opacity:.55}.sec{padding:90px 6vw}.hero{padding-top:70px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rev{transition:none!important}}
 
-   .tela { height: 190px; }
+   
+/* Área de visualização dos projetos */
 
-   .janela .print {
-       display: block;
-       width: 100%;
-       height: 190px;
-       object-fit: cover;
-       object-position: top;
-   }
+/* Preview dos sites */
+.tela {
+    height: 190px;
+    padding: 0;
+    overflow: hidden;
+    background: #0a0c1f;
+}
+
+/* Imagens dos projetos */
+.janela .print {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: top center;
+    background: transparent;
+}
+
+/* Cards responsivos */
+.g2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 760px) {
+    .g2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
